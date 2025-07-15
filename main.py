@@ -101,3 +101,14 @@ if st.session_state.terkunci:
         st.session_state.percobaan = 0
         st.session_state.terkunci = False
         st.success("✅ Sistem berhasil direset.")
+# Cek auto lock saat aplikasi dimuat
+check_auto_lock()
+
+# ⏱️ Tampilkan countdown jika pintu sedang terbuka
+if st.session_state.pintu_terbuka:
+    now = time.time()
+    sisa_waktu = int(waktu_timeout - (now - st.session_state.last_activity))
+    if sisa_waktu > 0:
+        st.info(f"⏳ Pintu akan terkunci otomatis dalam {sisa_waktu} detik jika tidak ada aktivitas.")
+    else:
+        st.success("🔒 Pintu terkunci otomatis.")
