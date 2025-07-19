@@ -3,7 +3,7 @@ import time
 
 # Setup halaman
 st.set_page_config(page_title="Smart Door Lock", page_icon="🔐")
-st.title("🔐 Smart Door Lock System Design")
+st.title("🔐 Smart Door Lock System Design by M Ridho NF (312410150) C.3")
 
 # Inisialisasi session state
 if 'pin_terdaftar' not in st.session_state:
