@@ -19,7 +19,7 @@ if 'security_mode' not in st.session_state:
 if 'last_activity' not in st.session_state:
     st.session_state.last_activity = time.time()
 
-pin_master = "0000"
+pin_master = "7351"
 max_attempt = 3
 waktu_timeout = 10  # detik untuk auto lock
 
